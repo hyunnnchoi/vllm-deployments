@@ -1,0 +1,10 @@
+chunk_size: 256
+local_cpu: false
+# max_local_cpu_size: 0 
+local_disk: /lmcache
+max_local_disk_size: 10  # 10GB in bytes (10 * 1024^3)
+save_decode_cache: false
+enable_p2p: false
+enable_blending: false
+cache_policy: "LRU" # "LRU", "LFU", "FIFO", "MRU"
+
