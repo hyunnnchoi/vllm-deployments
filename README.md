@@ -23,9 +23,13 @@ This repository contains Docker-based deployment configurations for running vari
   - 32B parameter model from LG AI Research
   - Optimized for Korean and English
 
-### 3. DeepSeek-R1
-- **Model**: TBD
-- **Location**: `models/deepseek-r1/`
+### 3. DeepSeek-R1-Distill-Qwen-32B
+- **Model**: `deepseek-ai/DeepSeek-R1-Distill-Qwen-32B`
+- **Location**: `models/deepseek-r1-distill-qwen-32b/`
+- **Features**:
+  - 32B parameter distilled model
+  - LMCache support
+  - Debug mode scripts
 - **Status**: In development
 
 ## Directory Structure
@@ -42,10 +46,16 @@ vllm-deployments/
     │   └── lmcache_config.yaml
     ├── exaone-4.0-32b/
     │   ├── Dockerfile
-    │   └── README.md
-    └── deepseek-r1/
+    │   ├── README.md
+    │   ├── launch-vllm-with-lmcache.sh
+    │   ├── launch-vllm-without-lmcache-debug.sh
+    │   └── lmcache_config.yaml
+    └── deepseek-r1-distill-qwen-32b/
         ├── Dockerfile
-        └── README.md
+        ├── README.md
+        ├── launch-vllm-with-lmcache.sh
+        ├── launch-vllm-without-lmcache-debug.sh
+        └── lmcache_config.yaml
 ```
 
 ## Usage
@@ -61,8 +71,8 @@ docker build --build-arg HF_TOKEN=<your_token> -t vllm-gpt-oss:latest .
 cd models/exaone-4.0-32b
 docker build --build-arg HF_TOKEN=<your_token> -t vllm-exaone:latest .
 
-# Build DeepSeek-R1
-cd models/deepseek-r1
+# Build DeepSeek-R1-Distill-Qwen-32B
+cd models/deepseek-r1-distill-qwen-32b
 docker build --build-arg HF_TOKEN=<your_token> -t vllm-deepseek:latest .
 ```
 

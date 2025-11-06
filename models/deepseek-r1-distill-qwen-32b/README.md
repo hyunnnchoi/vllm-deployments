@@ -1,6 +1,6 @@
-# DeepSeek-R1 Deployment
+# DeepSeek-R1-Distill-Qwen-32B Deployment
 
-Docker deployment for DeepSeek-R1 model using custom vLLM.
+Docker deployment for DeepSeek-R1-Distill-Qwen-32B model using custom vLLM.
 
 ## Status
 
@@ -8,9 +8,9 @@ Docker deployment for DeepSeek-R1 model using custom vLLM.
 
 ## Model Information
 
-- **Model ID**: TBD
-- **Parameters**: TBD
-- **Served Name**: TBD
+- **Model ID**: deepseek-ai/DeepSeek-R1-Distill-Qwen-32B
+- **Parameters**: 32B
+- **Served Name**: DeepSeek-R1-Distill-Qwen-32B
 
 ## Files
 
