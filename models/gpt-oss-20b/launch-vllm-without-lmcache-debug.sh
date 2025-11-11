@@ -18,6 +18,7 @@ sudo docker rm vllm-midm 2>/dev/null
 echo "Starting vLLM container..."
 sudo docker run -d --name vllm-gpt-oss \
   -p 8000:8000 --gpus all --ipc=host \
+  -v /home/xsailor6/hmchoi/ELIS/data:/data \
   -e VLLM_SCHEDULER_CSV_LOG="1" \
   -e VLLM_SCHEDULER_CSV_LOG_DIR="/tmp/vllm_scheduler_logs" \
   potato4332/vllm-gpt-oss:v0.0.1-debug \
