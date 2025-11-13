@@ -1,0 +1,9 @@
+chunk_size: 256
+local_cpu: false
+# max_local_cpu_size: 0  # 1GB in bytes - TP=4에서는 각 워커당 1GB 사용
+local_disk: /lmcache
+max_local_disk_size: 10  # 10GB, 각 TP worker 당 10GB 사용. 총 40GB 사용.
+save_decode_cache: false
+enable_p2p: false
+enable_blending: false
+cache_policy: "LRU" # "LRU", "LFU", "FIFO", "MRU"
