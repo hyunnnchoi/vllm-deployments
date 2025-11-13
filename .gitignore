@@ -30,6 +30,7 @@ wheels/
 vllm_logs/
 *.log
 
+nsys_reports/
 # HuggingFace cache
 .cache/
 huggingface/
